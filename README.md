@@ -54,7 +54,7 @@ If apex is installed, you can use sync_bn in training:
 * Set ``CKPT_FILE``  as your checkpoint file, you also can utilize our pretrained model (checkpoints/DDR-Net.ckpt).
 * Test DDR-Net and Fusion: 
 * The method of fusion is optional, including normal fusion and Gipuma fusion.
-* We suggest Gipuma to fusion to provide our results (need to install [fusibile](https://github.com/YoYo000/fusibile)). the script is borrowed from [MVSNet](https://github.com/YoYo000/MVSNet).  Note that more than 20 GB memory is required for tanks and temples fusion.
+* We suggest Gipuma to fusion to reproduce our results ([fusibile](https://github.com/YoYo000/fusibile) is required to install). the script is borrowed from [MVSNet](https://github.com/YoYo000/MVSNet).  Note that more than 20 GB memory is needed for tanks and temples dataset fusion.
 ```
 git clone https://github.com/YoYo000/fusibile
 cd fusibile
@@ -66,7 +66,10 @@ make
 * Set ``root_path`` as the path of depth map output and ``target_path`` as the path of point cloud reconstruction.
 
 ```
-./test.sh
+./test_dtu.sh
+```
+```
+./test_tanks.sh %%test on tanks and temples and fusion
 ```
 * Point cloud reconstruction can be evaluated by offical Matlab code in [DTU](http://roboimagedata.compute.dtu.dk/?page_id=36)
 ## Results on DTU
